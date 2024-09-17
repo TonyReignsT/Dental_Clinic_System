@@ -1,13 +1,11 @@
 <!-- Establishing db connection  -->
 
-<!-- Replace "your_server_name", "your_username", "your_password", and "your_database_name" 
-with your actual MySQL server details. -->
 
 <?php
-$servername = "localhost"; // usually "localhost"
+$servername = "localhost"; 
 $username = "root";
-$password = "root";  //password
-$dbname = "dental_clinic";  //database_name
+$password = "root";  
+$dbname = "dental_clinic";  
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -20,7 +18,7 @@ if ($conn->connect_error) {
     echo "Connection succesful!";
 }
 
-// Check if the table exists
+// Checking if the table exists
 $tableName = "users";
 $result = $conn->query("SHOW TABLES LIKE '$tableName'");
 
